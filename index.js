@@ -3,5 +3,7 @@ const fs = require('fs');
 const { Circle, Square, Triangle } = require('./lib/shapes');
 
 const questions = [
-    
+    {
+        
+    }
 ]
