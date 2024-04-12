@@ -1,6 +1,6 @@
-const inquirer = require('inquirer');
-const fs = require('fs/promises');
-const { Circle, Square, Triangle } = require('./lib/shapes');
+import inquirer from 'inquirer';
+import fs from 'fs/promises';
+import { Circle, Square, Triangle } from './lib/shapes.js';
 
 const shapeClasses = { Circle, Square, Triangle };
 
@@ -36,6 +36,9 @@ const generateLogo = async () => {
   
       const ShapeClass = shapeClasses[shape];
       const shapeInstance = new ShapeClass(shapeColor);
+
+      const timestamp = new Date().getTime();
+      const filename = `logo_${timestamp}.svg`;
   
       const svgContent = `
         <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
