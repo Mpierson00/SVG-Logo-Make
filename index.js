@@ -15,6 +15,14 @@ const questions = [
         message: 'What color do you want the text to be?',
     },
     {
-        
-    }
-]
+        type: 'list',
+        name: 'shape',
+        message: 'Choose a shape for your logo',
+        choices: ['Circle', 'Square', 'Triangle'],
+    },
+    {
+        type: 'input',
+        name: 'shapeColor',
+        message: 'What color do you want the shape to be?',
+    },
+];
