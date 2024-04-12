@@ -46,8 +46,8 @@ const generateLogo = async () => {
           <text x="150" y="125" font-family="Verdana" font-size="35" fill="${textColor}" text-anchor="middle">${text}</text>
         </svg>`;
   
-      await fs.writeFile(`./examples/logo.svg`, svgContent.trim());
-      console.log('Generated logo.svg in the examples folder.');
+      await fs.writeFile(`./examples/${filename}`, svgContent.trim());
+      console.log(`Generated ${filename} in the examples folder.`);
     } catch (error) {
       console.error('An error occurred:', error);
     }
