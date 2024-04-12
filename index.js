@@ -1,6 +1,6 @@
-import inquirer from 'inquirer';
-import fs from 'fs/promises';
-import { Circle, Square, Triangle } from './lib/shapes.js';
+const inquirer = require('inquirer');
+const fs = require('fs/promises');
+const { Circle, Square, Triangle } = require('./lib/shapes');
 
 const shapeClasses = { Circle, Square, Triangle };
 
@@ -31,22 +31,23 @@ const questions = [
 
 const generateLogo = async () => {
     try {
-        const answers = await inquirer.prompt(questions);
-        const { shape, shapeColor, text, textColor } = answers;
-        const shapeClass = shapeClasses[shape];
-        const shapeInstance = new shapeClass(shapeColor);
-
-        const svgContent = `
+      const answers = await inquirer.prompt(questions);
+      const { text, textColor, shape, shapeColor } = answers;
+  
+      const ShapeClass = shapeClasses[shape];
+      const shapeInstance = new ShapeClass(shapeColor);
+  
+      const svgContent = `
         <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-        ${shapeInstance.render()}
-        <text x="150" y="125" font-family="Verdana" font-size="35" fill="${textColor}" text-anchor="middle">${text}</text>
-      </svg>`;
-
+          ${shapeInstance.render()}
+          <text x="150" y="125" font-family="Verdana" font-size="35" fill="${textColor}" text-anchor="middle">${text}</text>
+        </svg>`;
+  
       await fs.writeFile(`./examples/logo.svg`, svgContent.trim());
       console.log('Generated logo.svg in the examples folder.');
     } catch (error) {
-        console.error('An error occurred:', error)
+      console.error('An error occurred:', error);
     }
-};
-
-generateLogo();
+  };
+  
+  generateLogo();
