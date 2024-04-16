@@ -37,7 +37,7 @@ The application uses custom middleware to log the HTTP method and path for each 
 ## Video Walkthrough
 
 For a detailed walkthrough of the SVG Logo Maker, including setup, usage, and features, please view the video tutorial here:
-SVG Logo Maker Video Walkthrough
+[SVG Logo Maker Video Walkthrough](https://www.youtube.com/watch?v=UEUiZBQSn6A)
 
 ## Contributing
 
