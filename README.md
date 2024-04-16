@@ -18,10 +18,9 @@ Before you begin, ensure you have the following installed:
 ## Installation
 
 1. Clone the repository:
-
-   git clone https://github.com/Mpierson00/SVG-Logo-Make.git
-   cd SVG-Logo-Make
-   npm install
+   - git clone https://github.com/Mpierson00/SVG-Logo-Make.git
+   - cd SVG-Logo-Make
+   - npm install
 
 ## Usage
 
